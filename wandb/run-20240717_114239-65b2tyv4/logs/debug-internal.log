@@ -1,0 +1,120 @@
+2024-07-17 11:42:39,247 INFO    StreamThr :4828 [internal.py:wandb_internal():85] W&B internal server running at pid: 4828, started at: 2024-07-17 11:42:39.244195
+2024-07-17 11:42:39,252 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: status
+2024-07-17 11:42:39,262 INFO    WriterThread:4828 [datastore.py:open_for_write():87] open: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240717_114239-65b2tyv4\run-65b2tyv4.wandb
+2024-07-17 11:42:39,264 DEBUG   SenderThread:4828 [sender.py:send():379] send: header
+2024-07-17 11:42:39,383 DEBUG   SenderThread:4828 [sender.py:send():379] send: run
+2024-07-17 11:42:44,444 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:42:49,508 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:42:50,840 ERROR   SenderThread:4828 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:42:50,840 ERROR   SenderThread:4828 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:42:54,564 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:42:57,494 ERROR   SenderThread:4828 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:42:57,495 ERROR   SenderThread:4828 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:42:59,628 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:04,684 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:09,752 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:14,809 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:19,674 INFO    SenderThread:4828 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\urllib3\connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\urllib3\connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "C:\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\ssl.py", line 1278, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\ssl.py", line 1134, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\urllib3\util\retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\urllib3\connectionpool.py", line 539, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\urllib3\connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 345, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\requests\adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=20)
+2024-07-17 11:43:19,879 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:24,920 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:29,992 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:31,438 ERROR   SenderThread:4828 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:43:31,438 ERROR   SenderThread:4828 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:43:35,039 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:40,092 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:40,801 ERROR   SenderThread:4828 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:43:40,801 ERROR   SenderThread:4828 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:43:45,118 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:50,169 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:55,229 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:43:57,538 ERROR   SenderThread:4828 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:43:57,538 ERROR   SenderThread:4828 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:44:00,283 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:44:05,314 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: keepalive
+2024-07-17 11:44:10,382 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: cancel
+2024-07-17 11:44:10,383 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: cancel
+2024-07-17 11:44:10,383 DEBUG   SenderThread:4828 [sender.py:send():388] Record cancelled: run
+2024-07-17 11:44:10,384 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: status_report
+2024-07-17 11:44:10,757 DEBUG   HandlerThread:4828 [handler.py:handle_request():158] handle_request: shutdown
+2024-07-17 11:44:10,757 INFO    HandlerThread:4828 [handler.py:finish():882] shutting down handler
+2024-07-17 11:44:11,396 INFO    WriterThread:4828 [datastore.py:close():296] close: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240717_114239-65b2tyv4\run-65b2tyv4.wandb
+2024-07-17 11:44:11,404 INFO    SenderThread:4828 [sender.py:finish():1608] shutting down sender

@@ -1,0 +1,56 @@
+wandb_version: 1
+
+vector-dim:
+  desc: null
+  value: 50
+learning-rate:
+  desc: null
+  value: 0.0001
+skip-window:
+  desc: null
+  value: 3
+vocabulary-size:
+  desc: null
+  value: 4999
+min_occurrence:
+  desc: null
+  value: 10
+optimizer:
+  desc: null
+  value: Adam
+batch_size:
+  desc: null
+  value: 128
+epochs:
+  desc: null
+  value: 3
+total-batches-count:
+  desc: null
+  value: 6193
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.4
+    cli_version: 0.17.4
+    framework: keras
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1721210011
+    t:
+      1:
+      - 2
+      - 3
+      - 55
+      2:
+      - 2
+      - 3
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.11.4
+      5: 0.17.4
+      8:
+      - 3
+      - 5
+      13: windows-amd64

@@ -1,0 +1,50 @@
+2024-07-17 11:39:06,053 INFO    MainThread:6956 [wandb_setup.py:_flush():76] Current SDK version is 0.17.4
+2024-07-17 11:39:06,055 INFO    MainThread:6956 [wandb_setup.py:_flush():76] Configure stats pid to 6956
+2024-07-17 11:39:06,056 INFO    MainThread:6956 [wandb_setup.py:_flush():76] Loading settings from C:\Users\TMAX27\.config\wandb\settings
+2024-07-17 11:39:06,057 INFO    MainThread:6956 [wandb_setup.py:_flush():76] Loading settings from D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\settings
+2024-07-17 11:39:06,058 INFO    MainThread:6956 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-07-17 11:39:06,058 INFO    MainThread:6956 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-07-17 11:39:06,059 INFO    MainThread:6956 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program_abspath': 'd:\\Dev\\AI Projects\\Skip-Gram-Implementation\\main.py', 'program': 'd:\\Dev\\AI Projects\\Skip-Gram-Implementation\\main.py'}
+2024-07-17 11:39:06,059 INFO    MainThread:6956 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-07-17 11:39:06,060 INFO    MainThread:6956 [wandb_init.py:_log_setup():529] Logging user logs to D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240717_113906-p2rucg5i\logs\debug.log
+2024-07-17 11:39:06,061 INFO    MainThread:6956 [wandb_init.py:_log_setup():530] Logging internal logs to D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240717_113906-p2rucg5i\logs\debug-internal.log
+2024-07-17 11:39:06,061 INFO    MainThread:6956 [wandb_init.py:init():569] calling init triggers
+2024-07-17 11:39:06,062 INFO    MainThread:6956 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {'vector-dim': 50, 'learning-rate': 0.0001, 'skip-window': 3, 'vocabulary-size': 4999, 'min_occurrence': 10, 'optimizer': 'Adam', 'batch_size': 128, 'epochs': 3, 'total-batches-count': 6193}
+2024-07-17 11:39:06,062 INFO    MainThread:6956 [wandb_init.py:init():619] starting backend
+2024-07-17 11:39:06,062 INFO    MainThread:6956 [wandb_init.py:init():623] setting up manager
+2024-07-17 11:39:06,074 INFO    MainThread:6956 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-07-17 11:39:06,083 INFO    MainThread:6956 [wandb_init.py:init():631] backend started and connected
+2024-07-17 11:39:06,094 INFO    MainThread:6956 [wandb_init.py:init():720] updated telemetry
+2024-07-17 11:39:06,187 INFO    MainThread:6956 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-07-17 11:39:19,279 ERROR   Thread-9 (wrapped_target):6956 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:39:19,279 ERROR   Thread-9 (wrapped_target):6956 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:39:21,737 ERROR   Thread-9 (wrapped_target):6956 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:39:21,738 ERROR   Thread-9 (wrapped_target):6956 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:39:21,738 INFO    Thread-9 (wrapped_target):6956 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 345, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2024-07-17 11:40:20,991 INFO    MainThread:6956 [wandb_run.py:_on_init():2402] communicating current version
+2024-07-17 11:40:21,204 INFO    MainThread:6956 [wandb_run.py:_on_init():2411] got version response 
+2024-07-17 11:40:21,205 INFO    MainThread:6956 [wandb_init.py:init():804] starting run threads in backend
+2024-07-17 11:40:21,728 INFO    MainThread:6956 [wandb_run.py:_console_start():2380] atexit reg
+2024-07-17 11:40:21,729 INFO    MainThread:6956 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-07-17 11:40:21,729 INFO    MainThread:6956 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-07-17 11:40:21,729 INFO    MainThread:6956 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-07-17 11:40:21,735 INFO    MainThread:6956 [wandb_init.py:init():847] run started, returning control to user process

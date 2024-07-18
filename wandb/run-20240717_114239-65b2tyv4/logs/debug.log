@@ -1,0 +1,60 @@
+2024-07-17 11:42:39,223 INFO    MainThread:9872 [wandb_setup.py:_flush():76] Current SDK version is 0.17.4
+2024-07-17 11:42:39,225 INFO    MainThread:9872 [wandb_setup.py:_flush():76] Configure stats pid to 9872
+2024-07-17 11:42:39,225 INFO    MainThread:9872 [wandb_setup.py:_flush():76] Loading settings from C:\Users\TMAX27\.config\wandb\settings
+2024-07-17 11:42:39,226 INFO    MainThread:9872 [wandb_setup.py:_flush():76] Loading settings from D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\settings
+2024-07-17 11:42:39,226 INFO    MainThread:9872 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-07-17 11:42:39,227 INFO    MainThread:9872 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-07-17 11:42:39,228 INFO    MainThread:9872 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program_abspath': 'd:\\Dev\\AI Projects\\Skip-Gram-Implementation\\main.py', 'program': 'd:\\Dev\\AI Projects\\Skip-Gram-Implementation\\main.py'}
+2024-07-17 11:42:39,228 INFO    MainThread:9872 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-07-17 11:42:39,229 INFO    MainThread:9872 [wandb_init.py:_log_setup():529] Logging user logs to D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240717_114239-65b2tyv4\logs\debug.log
+2024-07-17 11:42:39,229 INFO    MainThread:9872 [wandb_init.py:_log_setup():530] Logging internal logs to D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240717_114239-65b2tyv4\logs\debug-internal.log
+2024-07-17 11:42:39,230 INFO    MainThread:9872 [wandb_init.py:init():569] calling init triggers
+2024-07-17 11:42:39,230 INFO    MainThread:9872 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {'vector-dim': 50, 'learning-rate': 0.0001, 'skip-window': 3, 'vocabulary-size': 4999, 'min_occurrence': 10, 'optimizer': 'Adam', 'batch_size': 128, 'epochs': 3, 'total-batches-count': 6193}
+2024-07-17 11:42:39,230 INFO    MainThread:9872 [wandb_init.py:init():619] starting backend
+2024-07-17 11:42:39,230 INFO    MainThread:9872 [wandb_init.py:init():623] setting up manager
+2024-07-17 11:42:39,240 INFO    MainThread:9872 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-07-17 11:42:39,249 INFO    MainThread:9872 [wandb_init.py:init():631] backend started and connected
+2024-07-17 11:42:39,261 INFO    MainThread:9872 [wandb_init.py:init():720] updated telemetry
+2024-07-17 11:42:39,380 INFO    MainThread:9872 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-07-17 11:43:06,081 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:43:06,082 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:43:11,523 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:43:11,523 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:43:11,524 INFO    Thread-9 (wrapped_target):9872 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\internal\internal_api.py", line 345, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2024-07-17 11:43:19,307 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:43:19,307 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:43:38,557 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:43:38,557 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:43:59,242 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():349] 500 response executing GraphQL.
+2024-07-17 11:43:59,243 ERROR   Thread-9 (wrapped_target):9872 [internal_api.py:execute():350] {"error":"An internal error occurred. Please contact support."}
+2024-07-17 11:44:10,382 ERROR   MainThread:9872 [wandb_init.py:init():779] encountered error: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-07-17 11:44:10,383 ERROR   MainThread:9872 [wandb_init.py:init():1191] error in wandb.init()
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1181, in init
+    return wi.init()
+           ^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2024-07-17 11:44:11,766 WARNING MsgRouterThr:9872 [router.py:message_loop():77] message_loop has been closed

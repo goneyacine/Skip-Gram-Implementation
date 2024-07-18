@@ -1,0 +1,19 @@
+
+epoch : 1
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:68: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 113, in train
+    average_loss += step(center_words,context_words).numpy() / int(len(self.data) / batch_size)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filekb6sn2nh.py", line 16, in tf__step
+    ag__.converted_call(ag__.ld(wandb).log, ({'loss': ag__.converted_call(ag__.converted_call(ag__.ld(tf).reduce_mean, (ag__.ld(loss),), None, fscope).numpy, (), None, fscope)},), None, fscope)
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 104, in step  *
+        wandb.log({'loss': tf.reduce_mean(loss).numpy()})
+    AttributeError: 'SymbolicTensor' object has no attribute 'numpy'

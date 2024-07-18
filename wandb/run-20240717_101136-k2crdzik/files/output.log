@@ -1,0 +1,83 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 113, in train
+    average_loss += step(center_words,context_words).numpy() / int(len(self.data) / batch_size)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file9uu75x2h.py", line 16, in tf__step
+    ag__.converted_call(ag__.ld(wandb).log, ({'loss': ag__.converted_call(ag__.ld(tf).reduce_mean, (ag__.ld(loss),), None, fscope)},), None, fscope)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileps4fnlm1.py", line 91, in tf__wrapper
+    ag__.if_stmt(ag__.not_(do_return), if_body_3, else_body_3, get_state_3, set_state_3, ('do_return', 'retval_'), 2)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileps4fnlm1.py", line 86, in if_body_3
+    raise
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileiit2dn33.py", line 49, in tf__wrapper_fn
+    ag__.if_stmt(ag__.not_(ag__.converted_call(ag__.ld(getattr), (ag__.ld(self), '_is_finished', False), None, fscope)), if_body_1, else_body_1, get_state_1, set_state_1, ('do_return', 'retval_'), 2)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileiit2dn33.py", line 28, in if_body_1
+    raise
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileyh48jrko.py", line 52, in tf__wrapper
+    raise
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileh6nq8sya.py", line 233, in tf__log
+    ag__.converted_call(ag__.ld(self)._log, (), dict(data=ag__.ld(data), step=ag__.ld(step), commit=ag__.ld(commit)), fscope)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileblhteia6.py", line 34, in tf___log
+    ag__.converted_call(ag__.ld(self)._partial_history_callback, (ag__.ld(data), ag__.ld(step), ag__.ld(commit)), None, fscope)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileekf346kw.py", line 39, in tf___partial_history_callback
+    ag__.if_stmt(ag__.and_(lambda: ag__.ld(self)._backend, lambda: ag__.ld(self)._backend.interface), if_body_1, else_body_1, get_state_1, set_state_1, (), 0)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileekf346kw.py", line 34, in if_body_1
+    ag__.converted_call(ag__.ld(self)._backend.interface.publish_partial_history, (ag__.ld(row),), dict(user_step=ag__.ld(self)._step, step=ag__.ld(step), flush=ag__.ld(commit), publish_step=ag__.ld(not_using_tensorboard)), fscope)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filefvkzes4a.py", line 40, in tf__publish_partial_history
+    ag__.for_stmt(ag__.converted_call(ag__.ld(data).items, (), None, fscope), None, loop_body, get_state_1, set_state_1, (), {'iterate_names': '(k, v)'})
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filefvkzes4a.py", line 36, in loop_body
+    ag__.ld(item).value_json = ag__.converted_call(ag__.ld(json_dumps_safer_history), (ag__.ld(v),), None, fscope)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filet26bcohq.py", line 16, in tf__json_dumps_safer_history
+    raise
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filevm0w6cnt.py", line 91, in tf__dumps
+    ag__.if_stmt(ag__.and_(lambda: ag__.not_(ag__.ld(skipkeys)), lambda: ag__.and_(lambda: ag__.ld(ensure_ascii), lambda: ag__.and_(lambda: ag__.ld(check_circular), lambda: ag__.and_(lambda: ag__.ld(allow_nan), lambda: ag__.and_(lambda: ag__.ld(cls) is None, lambda: ag__.and_(lambda: ag__.ld(indent) is None, lambda: ag__.and_(lambda: ag__.ld(separators) is None, lambda: ag__.and_(lambda: ag__.ld(default) is None, lambda: ag__.and_(lambda: ag__.not_(ag__.ld(sort_keys)), lambda: ag__.not_(ag__.ld(kw))))))))))), if_body_1, else_body_1, get_state_1, set_state_1, ('do_return', 'retval_', 'cls'), 2)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filevm0w6cnt.py", line 90, in else_body_1
+    raise
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file7vowy2ju.py", line 80, in tf__encode
+    ag__.if_stmt(ag__.converted_call(ag__.ld(isinstance), (ag__.ld(o), ag__.ld(str)), None, fscope), if_body_2, else_body_2, get_state_2, set_state_2, ('do_return', 'retval_'), 2)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file7vowy2ju.py", line 56, in else_body_2
+    chunks = ag__.converted_call(ag__.ld(self).iterencode, (ag__.ld(o),), dict(_one_shot=True), fscope)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file_64h2dfg.py", line 170, in tf__iterencode
+    raise
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 803, in default
+    obj, converted = json_friendly(obj)
+                     ^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 596, in json_friendly
+    except RuntimeError:
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 104, in step  *
+        wandb.log({'loss': tf.reduce_mean(loss)})
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1696, in wrapper  *
+        return func(self, *args, **kwargs)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1668, in wrapper_fn  *
+        return func(self, *args, **kwargs)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1691, in wrapper  *
+        return func(self, *args, **kwargs)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1877, in log  *
+        self._log(data=data, step=step, commit=commit)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1641, in _log  *
+        self._partial_history_callback(data, step, commit)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1513, in _partial_history_callback  *
+        self._backend.interface.publish_partial_history(
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\interface\interface.py", line 612, in publish_partial_history  *
+        item.value_json = json_dumps_safer_history(v)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 842, in json_dumps_safer_history  *
+        return dumps(obj, cls=WandBHistoryJSONEncoder, **kwargs)
+    File "C:\Python311\Lib\json\__init__.py", line 238, in dumps  *
+        **kw).encode(obj)
+    File "C:\Python311\Lib\json\encoder.py", line 200, in encode  *
+        chunks = self.iterencode(o, _one_shot=True)
+    File "C:\Python311\Lib\json\encoder.py", line 258, in iterencode  *
+        return _iterencode(o, 0)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 803, in default  **
+        obj, converted = json_friendly(obj)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 595, in json_friendly
+        obj = obj.eval()
+    ValueError: Cannot evaluate tensor using `eval()`: No default session is registered. Use `with sess.as_default()` or pass an explicit session to `eval(session=sess)`

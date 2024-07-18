@@ -1,0 +1,45 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-07-17T09:11:36.828997",
+    "startedAt": "2024-07-17T09:11:36.042973",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "d:\\Dev\\AI Projects\\Skip-Gram-Implementation\\main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/goneyacine/Skip-Gram-Implementation.git",
+        "commit": "d559a7dde58bff5e630793d793fa9195ad5b1db1"
+    },
+    "email": "goneyacine@gmail.com",
+    "root": "D:/Dev/AI Projects/Skip-Gram-Implementation",
+    "host": "LAPTOP-33QS219R",
+    "username": "TMAX27",
+    "executable": "D:\\Dev\\AI Projects\\Skip-Gram-Implementation\\.venv\\Scripts\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2100.0,
+        "min": 0.0,
+        "max": 2100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2100.0,
+            "min": 0.0,
+            "max": 2100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 142.85937118530273,
+            "used": 78.3518295288086
+        }
+    },
+    "memory": {
+        "total": 6.937145233154297
+    }
+}
