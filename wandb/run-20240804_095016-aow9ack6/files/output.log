@@ -1,0 +1,17 @@
+epoch : 1
+word_embed ........  (16, 50)
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 131, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filect7m0t9_.py", line 18, in tf__step
+    emeb_weights = ag__.converted_call(ag__.ld(tf).reshape, (ag__.ld(emeb_weights), (ag__.ld(batch_size), ag__.ld(self).vocabulary_size - 1, 1)), None, fscope)
+                                                                     ^^^^^^^^^^^^
+UnboundLocalError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 110, in step  *
+        emeb_weights = tf.reshape(emeb_weights,(batch_size,self.vocabulary_size - 1,1))
+    UnboundLocalError: cannot access local variable 'emeb_weights' where it is not associated with a value

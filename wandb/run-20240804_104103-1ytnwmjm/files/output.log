@@ -1,0 +1,28 @@
+
+epoch : 1
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:70: RuntimeWarning: overflow encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 6, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 121, in train
+    average_loss +=  step_loss / int(len(self.data) / batch_size)
+                     ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\override_binary_operator.py", line 113, in binary_op_wrapper
+    return func(x, y, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\ops\tensor_math_operator_overrides.py", line 88, in _truediv_factory
+    return math_ops.truediv(x, y, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\dispatch.py", line 1260, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\ops\math_ops.py", line 1460, in truediv
+    @tf_export("math.truediv", "truediv")
+KeyboardInterrupt

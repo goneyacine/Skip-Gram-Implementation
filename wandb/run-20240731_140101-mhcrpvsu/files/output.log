@@ -1,0 +1,28 @@
+
+epoch : 1
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:70: RuntimeWarning: overflow encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=32)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 126, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filev1v0edpg.py", line 13, in tf__step
+    y_pred = ag__.converted_call(ag__.ld(self).model, (ag__.ld(x),), None, fscope)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 72, in error_handler
+    del filtered_tb
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 108, in step  *
+        y_pred = self.model(x)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler  **
+        raise e.with_traceback(filtered_tb) from None
+    ValueError: Exception encountered when calling layer 'tf.reshape' (type TFOpLambda).
+    Cannot reshape a tensor with 1600 elements to shape [50,1] (50 elements) for '{{node model/tf.reshape/Reshape}} = Reshape[T=DT_FLOAT, Tshape=DT_INT32](model/embedding/embedding_lookup/Identity, model/tf.reshape/Reshape/shape)' with input shapes: [32,1,50], [2] and with input tensors computed as partial shapes: input[1] = [50,1].
+    Call arguments received by layer 'tf.reshape' (type TFOpLambda):
+      • tensor=tf.Tensor(shape=(32, 1, 50), dtype=float32)
+      • shape=('50', '1')
+      • name=None

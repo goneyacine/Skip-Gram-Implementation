@@ -1,0 +1,17 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=128)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 140, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file_j9opa27.py", line 14, in tf__step
+    loss = ag__.converted_call(ag__.converted_call(ag__.ld(tf).keras.losses.BinaryCrossEntropy, (), dict(from_logits=True), fscope), (ag__.ld(y), ag__.ld(y_pred)), None, fscope)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 127, in step  *
+        loss = tf.keras.losses.BinaryCrossEntropy(from_logits=True)(y,y_pred)
+    AttributeError: module 'keras._tf_keras.keras.losses' has no attribute 'BinaryCrossEntropy'

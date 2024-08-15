@@ -1,0 +1,32 @@
+
+epoch : 1
+D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:80: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=64)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 142, in train
+    print('valid loss :' + str(valid_loss.numpy()))
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 92, in valid
+    loss += tf.keras.losses.BinaryCrossentropy(from_logits=True)(context_words,y_pred) / batches_count
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses\loss.py", line 55, in __call__
+    return reduce_weighted_values(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses\loss.py", line 155, in reduce_weighted_values
+    loss = reduce_values(values, reduction)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses\loss.py", line 117, in reduce_values
+    loss = ops.sum(values)
+           ^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\ops\numpy.py", line 5902, in sum
+    return backend.numpy.sum(x, axis=axis, keepdims=keepdims)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend\tensorflow\numpy.py", line 2346, in sum
+    dtype = standardize_dtype(x.dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend\common\variables.py", line 510, in standardize_dtype
+    dtype = dtypes.PYTHON_DTYPES_MAP.get(dtype, dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

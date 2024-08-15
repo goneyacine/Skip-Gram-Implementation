@@ -1,0 +1,65 @@
+wandb_version: 1
+
+vector_dim:
+  desc: null
+  value: 300
+learning_rate:
+  desc: null
+  value: 0.01
+skip_window:
+  desc: null
+  value: 3
+vocabulary_size:
+  desc: null
+  value: 9999
+min_occurrence:
+  desc: null
+  value: 10
+negative_sampling:
+  desc: null
+  value: false
+optimizer:
+  desc: null
+  value: Adam
+batch_size:
+  desc: null
+  value: 128
+epochs:
+  desc: null
+  value: 1
+train_words_count:
+  desc: null
+  value: 8523902
+valid_words_count:
+  desc: null
+  value: 710325
+steps_to_valid:
+  desc: null
+  value: 5000
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.4
+    cli_version: 0.17.4
+    framework: keras
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1723017392
+    t:
+      1:
+      - 2
+      - 3
+      - 55
+      2:
+      - 2
+      - 3
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.11.4
+      5: 0.17.4
+      8:
+      - 3
+      - 5
+      13: windows-amd64

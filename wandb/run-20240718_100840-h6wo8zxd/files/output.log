@@ -1,0 +1,89 @@
+
+epoch : 1
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:69: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+[34m[1mwandb[39m[22m: [33mWARNING[39m Serializing object of type ndarray that is 15357072 bytes
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 115, in train
+    wandb.log({'loss':step_loss})
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 449, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 400, in wrapper_fn
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 390, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1877, in log
+    self._log(data=data, step=step, commit=commit)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1641, in _log
+    self._partial_history_callback(data, step, commit)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1513, in _partial_history_callback
+    self._backend.interface.publish_partial_history(
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\interface\interface.py", line 612, in publish_partial_history
+    item.value_json = json_dumps_safer_history(v)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 842, in json_dumps_safer_history
+    return dumps(obj, cls=WandBHistoryJSONEncoder, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Python311\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 804, in default
+    obj, compressed = maybe_compress_history(obj)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 705, in maybe_compress_history
+    return wandb.Histogram(obj, num_bins=32).to_json(), True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\data_types\histogram.py", line 77, in __init__
+    self.histogram, self.bins = np.histogram(sequence, bins=num_bins)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\numpy\lib\histograms.py", line 780, in histogram
+    bin_edges, uniform_bins = _get_bin_edges(a, bins, range, weights)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\numpy\lib\histograms.py", line 426, in _get_bin_edges
+    first_edge, last_edge = _get_outer_edges(a, range)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\numpy\lib\histograms.py", line 323, in _get_outer_edges
+    raise ValueError(
+ValueError: autodetected range of [nan, nan] is not finite

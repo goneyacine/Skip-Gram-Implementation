@@ -1,0 +1,5 @@
+epoch : 1
+<class 'numpy.ndarray'>
+Tensor("x:0", shape=(8,), dtype=int32)
+y_true ......................  Tensor("Shape:0", shape=(2,), dtype=int32)
+y_pred ......................  Tensor("Shape_1:0", shape=(2,), dtype=int32)

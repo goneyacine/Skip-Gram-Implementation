@@ -1,0 +1,8 @@
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:69: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+epoch : 1
+average_loss :-11524.2646484375
+epoch : 2
+average_loss :0.17019936442375183
+epoch : 3
+average_loss :0.1702008843421936

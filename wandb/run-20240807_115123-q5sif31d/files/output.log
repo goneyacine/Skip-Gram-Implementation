@@ -1,0 +1,39 @@
+
+epoch : 1
+D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:80: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+valid loss :-478991.9
+valid loss :-77.23896
+valid loss :-29.98096
+valid loss :-24.763296
+valid loss :-53.889202
+valid loss :-1135.9286
+valid loss :-3924.7358
+valid loss :-70993.4
+valid loss :-3292.6877
+valid loss :-3244.8645
+valid loss :-71192.92
+valid loss :-117886.73
+valid loss :-242935.75
+valid loss :-15509.695
+valid loss :-8199.019
+valid loss :-4098.522
+valid loss :-4751.5845
+valid loss :-7301.202
+valid loss :-1509120.8
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=64)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 136, in train
+    center_words,context_words = self.next_batch(data_index,self.train_data,batch_size)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 82, in next_batch
+    return tf.convert_to_tensor(center_words), tf.convert_to_tensor(np.sum(context_words,axis=2))
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\numpy\core\fromnumeric.py", line 2313, in sum
+    return _wrapreduction(a, np.add, 'sum', axis, dtype, out, keepdims=keepdims,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\numpy\core\fromnumeric.py", line 88, in _wrapreduction
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

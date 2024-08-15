@@ -1,0 +1,46 @@
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:80: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=128)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 145, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file6pla986t.py", line 41, in tf__step
+    ag__.for_stmt(ag__.converted_call(ag__.ld(range), (ag__.ld(self).skip_window * 2,), None, fscope), None, loop_body, get_state, set_state, (), {'iterate_names': 'i'})
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file6pla986t.py", line 31, in loop_body
+    ag__.converted_call(ag__.ld(self).optimizer.apply_gradients, (ag__.converted_call(ag__.ld(zip), (ag__.ld(gradients), [ag__.ld(embed), ag__.ld(weights), ag__.ld(biasses)]), None, fscope),), None, fscope)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 282, in apply_gradients
+    self.apply(grads, trainable_variables)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 321, in apply
+    self.build(trainable_variables)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\adam.py", line 92, in build
+    super().build(var_list)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\tracking.py", line 26, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 152, in build
+    self._trainable_variables_indices[self._var_key(variable)] = i
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend\tensorflow\optimizer.py", line 88, in _var_key
+    return variable._unique_id
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 136, in step  *
+        self.optimizer.apply_gradients(zip(gradients, [embed, weights, biasses]))
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 282, in apply_gradients  **
+        self.apply(grads, trainable_variables)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 321, in apply
+        self.build(trainable_variables)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\adam.py", line 92, in build
+        super().build(var_list)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\tracking.py", line 26, in wrapper
+        return fn(*args, **kwargs)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 152, in build
+        self._trainable_variables_indices[self._var_key(variable)] = i
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend\tensorflow\optimizer.py", line 88, in _var_key
+        return variable._unique_id
+    AttributeError: 'SymbolicTensor' object has no attribute '_unique_id'
+epoch : 1

@@ -1,0 +1,23 @@
+epoch : 1
+y shape : Tensor("strided_slice:0", shape=(128, 9999), dtype=int32)
+j  Tensor("ArgMax:0", shape=(128,), dtype=int64)
+(128, 300, 9999)
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:80: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=128)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 149, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filefufwmds9.py", line 33, in tf__step
+    ag__.for_stmt(ag__.converted_call(ag__.ld(range), (ag__.ld(self).skip_window * 2,), None, fscope), None, loop_body, get_state, set_state, (), {'iterate_names': 'i'})
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filefufwmds9.py", line 27, in loop_body
+    y_pred = ag__.converted_call(ag__.ld(tf).add, (ag__.converted_call(ag__.ld(tf).matmul, (ag__.converted_call(ag__.ld(tf).transpose, (ag__.converted_call(ag__.ld(tf).nn.embedding_lookup, (ag__.ld(self).embed_weights_matrix, ag__.ld(j)), None, fscope),), dict(perm=[0, 2, 1]), fscope), ag__.converted_call(ag__.ld(tf).expand_dims, (ag__.ld(embed),), dict(axis=-1), fscope)), None, fscope), ag__.converted_call(ag__.ld(tf).nn.embedding_lookup, (ag__.ld(self).embed_biases_matrix, ag__.ld(j)), None, fscope)), None, fscope)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 133, in step  *
+        ,tf.expand_dims(embed,axis=-1)), tf.nn.embedding_lookup(self.embed_biases_matrix,j))
+    ValueError: Dimensions must be equal, but are 9999 and 128 for '{{node Add}} = AddV2[T=DT_FLOAT](MatMul, embedding_lookup_3/Identity)' with input shapes: [128,9999,1], [128,9999].

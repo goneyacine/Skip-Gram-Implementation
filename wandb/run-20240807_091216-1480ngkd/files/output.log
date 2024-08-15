@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=128)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 149, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file9jt25w0v.py", line 33, in tf__step
+    ag__.for_stmt(ag__.converted_call(ag__.ld(range), (ag__.ld(self).skip_window * 2,), None, fscope), None, loop_body, get_state, set_state, (), {'iterate_names': 'i'})
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file9jt25w0v.py", line 29, in loop_body
+    ag__.ld(losses)[ag__.ld(i)] = ag__.converted_call(ag__.converted_call(ag__.ld(tf).keras.losses.CategoricalCrossentropy, (), dict(from_logits=True), fscope), (ag__.ld(y)[:, :, ag__.ld(i)], ag__.ld(y_pred)), None, fscope)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 135, in step  *
+        losses[i] = tf.keras.losses.CategoricalCrossentropy(from_logits=True)(y[:,:,i],y_pred)
+    TypeError: 'SymbolicTensor' object does not support item assignment
+epoch : 1
+y shape : Tensor("strided_slice:0", shape=(128, 9999), dtype=int32)
+j  Tensor("ArgMax:0", shape=(128,), dtype=int64)
+(128, 300, 9999)
+(128, 9999)

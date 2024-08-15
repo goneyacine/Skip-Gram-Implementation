@@ -1,0 +1,40 @@
+
+epoch : 1
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:70: RuntimeWarning: overflow encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 6, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 121, in train
+    wandb.log({'train_loss':step_loss.numpy()})
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 449, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 400, in wrapper_fn
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 390, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1877, in log
+    self._log(data=data, step=step, commit=commit)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1641, in _log
+    self._partial_history_callback(data, step, commit)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1513, in _partial_history_callback
+    self._backend.interface.publish_partial_history(
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\interface\interface.py", line 618, in publish_partial_history
+    self._publish_partial_history(partial_history)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\interface\interface_shared.py", line 89, in _publish_partial_history
+    self._publish(rec)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\interface\interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\lib\sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

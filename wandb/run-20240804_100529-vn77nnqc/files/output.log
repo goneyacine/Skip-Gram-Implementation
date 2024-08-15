@@ -1,0 +1,18 @@
+
+epoch : 1
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 122, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_fileyilzn9jy.py", line 18, in tf__step
+    ag__.ld(print)(ag__.converted_call(ag__.ld(loss).numpy, (), None, fscope))
+                                       ^^^^^^^^^^^^^^^^^^^
+AttributeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 112, in step  *
+        print(loss.numpy())
+    AttributeError: 'SymbolicTensor' object has no attribute 'numpy'

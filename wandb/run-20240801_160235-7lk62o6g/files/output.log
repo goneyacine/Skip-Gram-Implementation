@@ -1,0 +1,67 @@
+epoch : 1
+word_embed ........  (16, 50)
+W ........  (16, 50, 1999)
+B ........  (16, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+matmul ................  (1, 1999)
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 132, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filed7b782nd.py", line 41, in tf__step
+    ag__.converted_call(ag__.ld(self).optimizer.apply_gradients, (ag__.converted_call(ag__.ld(zip), (ag__.ld(gradients), [ag__.ld(word_embed), ag__.ld(embed_weights), ag__.ld(embed_biases)]), None, fscope),), None, fscope)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1223, in apply_gradients
+    return super().apply_gradients(grads_and_vars, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 638, in apply_gradients
+    self.build(trainable_variables)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\adam.py", line 137, in build
+    super().build(var_list)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 416, in build
+    self._build_index_dict(var_list)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 442, in _build_index_dict
+    var_key = self._var_key(var)
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1161, in _var_key
+    return super()._var_key(variable)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 162, in _var_key
+    return variable._unique_id
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 122, in step  *
+        self.optimizer.apply_gradients(zip(gradients, [word_embed, embed_weights, embed_biases]))
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1223, in apply_gradients  **
+        return super().apply_gradients(grads_and_vars, name=name)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 638, in apply_gradients
+        self.build(trainable_variables)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\adam.py", line 137, in build
+        super().build(var_list)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 416, in build
+        self._build_index_dict(var_list)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 442, in _build_index_dict
+        var_key = self._var_key(var)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1161, in _var_key
+        return super()._var_key(variable)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 162, in _var_key
+        return variable._unique_id
+    AttributeError: 'SymbolicTensor' object has no attribute '_unique_id'

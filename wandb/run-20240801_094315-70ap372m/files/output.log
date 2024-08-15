@@ -1,0 +1,12 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=32)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 129, in train
+    center_words,context_words = self.next_batch(batch_size=batch_size)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 65, in next_batch
+    center_words[i] = self.data[self.data_index + i][0]
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'int' object is not subscriptable

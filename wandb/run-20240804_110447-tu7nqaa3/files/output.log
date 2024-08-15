@@ -1,0 +1,15 @@
+
+epoch : 1
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:70: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 6, in <module>
+    _model.train(epochs=10,batch_size=128)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 123, in train
+    if auto_save:
+     ^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 131, in save
+    os.mkdir(output_path)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\numpy\lib\npyio.py", line 1628, in savetxt
+    fh.write(v)
+KeyboardInterrupt

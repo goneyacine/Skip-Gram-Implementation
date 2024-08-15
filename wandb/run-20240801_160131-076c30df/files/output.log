@@ -1,0 +1,25 @@
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:70: RuntimeWarning: overflow encountered in cast
+  context_words[i] = context
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 132, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filea0kgac05.py", line 39, in tf__step
+    ag__.for_stmt(ag__.converted_call(ag__.ld(range), (ag__.ld(batch_size),), None, fscope), None, loop_body, get_state, set_state, ('loss',), {'iterate_names': 'i'})
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filea0kgac05.py", line 35, in loop_body
+    loss += ag__.converted_call(ag__.converted_call(tf.keras.losses.CategoricalCrossentropy, (), None, fscope), (y[i], y_pred), None, fscope) / self.batch_size
+                                                                                                                                                ^^^^^^^^^^^^^^^
+AttributeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 117, in step  *
+        loss += tf.keras.losses.CategoricalCrossentropy()(y[i], y_pred) / self.batch_size
+    AttributeError: 'model' object has no attribute 'batch_size'
+epoch : 1
+word_embed ........  (16, 50)
+W ........  (16, 50, 1999)
+B ........  (16, 1999)
+matmul ................  (1, 1999)

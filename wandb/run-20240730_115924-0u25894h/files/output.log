@@ -1,0 +1,76 @@
+
+epoch : 1
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:69: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=32)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 124, in train
+    self.save()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 132, in save
+    self.model.save(os.path.join(output_path,'skip_gram.keras'))
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\training.py", line 3103, in save
+    saving_api.save_model(
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\saving_api.py", line 164, in save_model
+    saving_lib.save_model(model, filepath)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\saving_lib.py", line 197, in save_model
+    _save_state(
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\saving_lib.py", line 393, in _save_state
+    for child_attr, child_obj in _walk_trackable(trackable):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\saving_lib.py", line 371, in _walk_trackable
+    child_obj = getattr(trackable, child_attr)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\base_layer.py", line 3462, in _tracking_metadata
+    return self._trackable_saved_model_saver.tracking_metadata
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\legacy\saved_model\base_serialization.py", line 54, in tracking_metadata
+    return json_utils.Encoder().encode(self.python_properties)
+                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\legacy\saved_model\layer_serialization.py", line 37, in python_properties
+    return self._python_properties_internal()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\legacy\saved_model\model_serialization.py", line 31, in _python_properties_internal
+    metadata = super()._python_properties_internal()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\legacy\saved_model\layer_serialization.py", line 56, in _python_properties_internal
+    metadata.update(get_serialized(self.obj))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\legacy\saved_model\layer_serialization.py", line 134, in get_serialized
+    return serialization.serialize_keras_object(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\legacy\serialization.py", line 304, in serialize_keras_object
+    config = instance.get_config()
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\functional.py", line 787, in get_config
+    config = copy.deepcopy(get_network_config(self, config=config))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\functional.py", line 1593, in get_network_config
+    layer_config = serialize_layer_fn(layer)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\serialization_lib.py", line 260, in serialize_keras_object
+    get_build_and_compile_config(obj, config_with_public_class)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\serialization_lib.py", line 294, in get_build_and_compile_config
+    build_config = obj.get_build_config()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\base_layer.py", line 2313, in get_build_config
+    "input_shape": tf.nest.map_structure(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\nest.py", line 631, in map_structure
+    return nest_util.map_structure(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\nest_util.py", line 1066, in map_structure
+    return _tf_core_map_structure(func, *structure, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\nest_util.py", line 1102, in _tf_core_map_structure
+    entries = zip(*flat_structure)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\nest_util.py", line 1101, in <genexpr>
+    flat_structure = (_tf_core_flatten(s, expand_composites) for s in structure)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\nest_util.py", line 726, in _tf_core_flatten
+    expand_composites = bool(expand_composites)
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

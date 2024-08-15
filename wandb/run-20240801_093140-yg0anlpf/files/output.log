@@ -1,0 +1,20 @@
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:70: RuntimeWarning: overflow encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=32)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 130, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filen13xa02d.py", line 16, in tf__step
+    y_pred = ag__.converted_call(ag__.ld(tf).add, (ag__.converted_call(ag__.ld(tf).matmul, (ag__.ld(word_embed), ag__.ld(self).embed_weights_matrix[ag__.ld(x)]), None, fscope), ag__.ld(self).embed_biasses_matrix[ag__.ld(x)]), None, fscope)
+                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 112, in step  *
+        y_pred = tf.add(tf.matmul(word_embed,self.embed_weights_matrix[x]),self.embed_biasses_matrix[x])
+    ValueError: Shape must be rank 1 but is rank 3 for '{{node strided_slice_1}} = StridedSlice[Index=DT_INT32, T=DT_FLOAT, begin_mask=0, ellipsis_mask=0, end_mask=0, new_axis_mask=0, shrink_axis_mask=1](ReadVariableOp_1, strided_slice_1/stack, strided_slice_1/stack_1, strided_slice_1/stack_2)' with input shapes: [4999,50,4999], [1,32,1], [1,32,1], [1].
+epoch : 1
+Tensor("x:0", shape=(32, 1), dtype=int32)
+x shape is : Tensor("Shape:0", shape=(3,), dtype=int32)

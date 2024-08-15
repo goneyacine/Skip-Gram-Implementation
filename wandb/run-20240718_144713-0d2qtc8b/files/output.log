@@ -1,0 +1,17 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 115, in train
+    step_accuracy,step_loss = step(center_words,context_words)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file8pzzrvm1.py", line 15, in tf__step
+    accuracy = accuracy = ag__.converted_call((ag__.ld(y) == ag__.ld(y_pred)).sum, (), None, fscope) / ag__.ld(y).shape[0]
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 102, in step  *
+        accuracy = accuracy = (y == y_pred).sum() / y.shape[0]
+    AttributeError: 'SymbolicTensor' object has no attribute 'sum'

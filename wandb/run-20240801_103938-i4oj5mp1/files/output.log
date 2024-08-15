@@ -1,0 +1,32 @@
+epoch : 1
+<class 'numpy.ndarray'>
+Tensor("x:0", shape=(8,), dtype=int32)
+y_true ......................  Tensor("Shape:0", shape=(2,), dtype=int32)
+y_pred ......................  Tensor("Shape_1:0", shape=(2,), dtype=int32)
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=8)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 129, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\autograph_util.py", line 52, in autograph_handler
+    raise e.ag_error_metadata.to_exception(e)
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 120, in step  *
+        self.optimizer.apply_gradients(zip(gradients, [self.embed_matrix, self.embed_weights_matrix, self.embed_biases_matrix]))
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1223, in apply_gradients  **
+        return super().apply_gradients(grads_and_vars, name=name)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 638, in apply_gradients
+        self.build(trainable_variables)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\adam.py", line 150, in build
+        self.add_variable_from_reference(
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1125, in add_variable_from_reference
+        return super().add_variable_from_reference(
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 508, in add_variable_from_reference
+        initial_value = tf.zeros(
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\dtensor\python\api.py", line 64, in call_with_layout
+        return fn(*args, **kwargs)
+    ResourceExhaustedError: {{function_node __wrapped__Fill_device_/job:localhost/replica:0/task:0/device:CPU:0}} OOM when allocating tensor with shape[4999,50,4999] and type float on /job:localhost/replica:0/task:0/device:CPU:0 by allocator mklcpu [Op:Fill] name:

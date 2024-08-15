@@ -1,0 +1,1 @@
+{"vector_dim": 300, "learning_rate": 0.0001, "skip_window": 3, "vocabulary_size": 4999, "min_occurrence": 10, "negative_sampling": false, "optimizer": "Adam", "batch_size": 64, "epochs": 1, "train_words_count": 7925011, "valid_words_count": 264167, "steps_to_valid": 5000}

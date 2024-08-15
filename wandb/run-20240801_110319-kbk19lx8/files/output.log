@@ -1,0 +1,30 @@
+
+epoch : 1
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 124, in train
+    wandb.log({'train_loss':step_loss.numpy()})
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 449, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 400, in wrapper_fn
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 390, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1877, in log
+    self._log(data=data, step=step, commit=commit)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1641, in _log
+    self._partial_history_callback(data, step, commit)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\wandb_run.py", line 1513, in _partial_history_callback
+    self._backend.interface.publish_partial_history(
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\sdk\interface\interface.py", line 612, in publish_partial_history
+    item.value_json = json_dumps_safer_history(v)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\wandb\util.py", line 842, in json_dumps_safer_history
+    return dumps(obj, cls=WandBHistoryJSONEncoder, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

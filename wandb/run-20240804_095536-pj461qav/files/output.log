@@ -1,0 +1,39 @@
+epoch : 1
+word_embed ........  (16, 50)
+matmul ................  (16, 1999)
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:70: RuntimeWarning: overflow encountered in cast
+  context_words[i] = context
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 126, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filel2qs8ge8.py", line 19, in tf__step
+    ag__.converted_call(ag__.ld(self).optimizer.apply_gradients, (ag__.converted_call(ag__.ld(zip), (ag__.ld(gradients), [ag__.ld(self).embed_matrix, ag__.ld(self).embed_weights_matrix, ag__.ld(self).embed_biases_matrix]), None, fscope),), None, fscope)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1222, in apply_gradients
+    grads_and_vars = self.aggregate_gradients(grads_and_vars)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1184, in aggregate_gradients
+    return optimizer_utils.all_reduce_sum_gradients(grads_and_vars)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\utils.py", line 33, in all_reduce_sum_gradients
+    filtered_grads_and_vars = filter_empty_gradients(grads_and_vars)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\utils.py", line 77, in filter_empty_gradients
+    raise ValueError(
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 116, in step  *
+        self.optimizer.apply_gradients(zip(gradients, [self.embed_matrix, self.embed_weights_matrix, self.embed_biases_matrix]))
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1222, in apply_gradients  **
+        grads_and_vars = self.aggregate_gradients(grads_and_vars)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1184, in aggregate_gradients
+        return optimizer_utils.all_reduce_sum_gradients(grads_and_vars)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\utils.py", line 33, in all_reduce_sum_gradients
+        filtered_grads_and_vars = filter_empty_gradients(grads_and_vars)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\utils.py", line 77, in filter_empty_gradients
+        raise ValueError(
+    ValueError: No gradients provided for any variable: (['Variable:0', 'Variable:0', 'Variable:0'],). Provided `grads_and_vars` is ((None, <tf.Variable 'Variable:0' shape=(1999, 50) dtype=float32>), (None, <tf.Variable 'Variable:0' shape=(50, 1999) dtype=float32>), (None, <tf.Variable 'Variable:0' shape=(1999,) dtype=float32>)).

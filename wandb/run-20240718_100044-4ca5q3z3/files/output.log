@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 129, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file41difweu.py", line 13, in tf__step
+    loss = ag__.converted_call(ag__.ld(self).nce_loss, (ag__.ld(y), ag__.ld(y_pred)), None, fscope)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filen6vpyxn1.py", line 11, in tf__nce_loss
+    loss = ag__.converted_call(ag__.ld(tf).nn.nce_loss, (), dict(weights=ag__.ld(embed_weights), biases=ag__.converted_call(ag__.ld(tf).zeros, ([ag__.ld(self).max_vocabulary_size],), None, fscope), labels=ag__.ld(y_true), inputs=ag__.ld(y_pred), num_sampled=0, num_classes=ag__.ld(self).max_vocabulary_size), fscope)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 116, in step  *
+        loss = self.nce_loss(y,y_pred)
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 27, in nce_loss  *
+        loss = tf.nn.nce_loss(weights=embed_weights,
+    ValueError: Attr 'num_sampled' of 'LogUniformCandidateSampler' Op passed 0 less than minimum 1.
+epoch : 1

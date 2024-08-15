@@ -1,0 +1,52 @@
+epoch : 1
+172
+1
+4287
+46
+62
+149
+123
+869
+665
+160
+1
+110
+948
+2
+1
+137
+948
+3999
+172
+9
+178
+62
+4
+5
+211
+6
+1229
+104
+449
+18
+62
+2301
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:71: RuntimeWarning: overflow encountered in cast
+  context_words[i] = context
+Tensor("x:0", shape=(32,), dtype=int32)
+x shape is : Tensor("Shape:0", shape=(2,), dtype=int32)
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=32)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 131, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filek2_2gs34.py", line 16, in tf__step
+    y_pred = ag__.converted_call(ag__.ld(tf).add, (ag__.converted_call(ag__.ld(tf).matmul, (ag__.ld(word_embed), ag__.ld(self).embed_weights_matrix[ag__.ld(x)]), None, fscope), ag__.ld(self).embed_biasses_matrix[ag__.ld(x)]), None, fscope)
+                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 113, in step  *
+        y_pred = tf.add(tf.matmul(word_embed,self.embed_weights_matrix[x]),self.embed_biasses_matrix[x])
+    TypeError: Only integers, slices (`:`), ellipsis (`...`), tf.newaxis (`None`) and scalar tf.int32/tf.int64 tensors are valid indices, got <tf.Tensor 'x:0' shape=(32,) dtype=int32>

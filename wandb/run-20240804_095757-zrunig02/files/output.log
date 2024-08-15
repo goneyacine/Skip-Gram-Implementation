@@ -1,0 +1,51 @@
+epoch : 1
+word_embed ........  (16, 50)
+matmul ................  (16, 1999)
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 126, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file5pdcb8ye.py", line 19, in tf__step
+    ag__.converted_call(ag__.ld(self).optimizer.apply_gradients, (ag__.converted_call(ag__.ld(zip), (ag__.ld(gradients), [ag__.ld(self).embed_matrix, ag__.ld(self).embed_weights_matrix, ag__.ld(self).embed_biases_matrix]), None, fscope),), None, fscope)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1223, in apply_gradients
+    return super().apply_gradients(grads_and_vars, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 652, in apply_gradients
+    iteration = self._internal_apply_gradients(grads_and_vars)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1253, in _internal_apply_gradients
+    return tf.__internal__.distribute.interim.maybe_merge_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1345, in _distributed_apply_gradients_fn
+    distribution.extended.update(
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1342, in apply_grad_to_update_var
+    return self._update_step(grad, var)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 241, in _update_step
+    self.update_step(gradient, variable)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\adam.py", line 198, in update_step
+    m.assign_add((gradient - m) * (1 - self.beta_1))
+                  ~~~~~~~~~^~~
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 116, in step  *
+        self.optimizer.apply_gradients(zip(gradients, [self.embed_matrix, self.embed_weights_matrix, self.embed_biases_matrix]))
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1223, in apply_gradients  **
+        return super().apply_gradients(grads_and_vars, name=name)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 652, in apply_gradients
+        iteration = self._internal_apply_gradients(grads_and_vars)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1253, in _internal_apply_gradients
+        return tf.__internal__.distribute.interim.maybe_merge_call(
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1345, in _distributed_apply_gradients_fn
+        distribution.extended.update(
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 1342, in apply_grad_to_update_var  **
+        return self._update_step(grad, var)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\optimizer.py", line 241, in _update_step
+        self.update_step(gradient, variable)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\optimizers\adam.py", line 198, in update_step
+        m.assign_add((gradient - m) * (1 - self.beta_1))
+    ValueError: Dimensions must be equal, but are 16 and 1999 for '{{node Adam/sub_2}} = Sub[T=DT_FLOAT](IdentityN, Adam/sub_2/ReadVariableOp)' with input shapes: [16,50], [1999,50].

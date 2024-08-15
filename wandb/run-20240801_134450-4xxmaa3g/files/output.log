@@ -1,0 +1,41 @@
+epoch : 1
+word_embed ........  (16, 50)
+W ........  (16, 50, 1999)
+B ........  (16, 1999)
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=16)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 126, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file7bqcfcm2.py", line 36, in tf__step
+    ag__.if_stmt(ag__.ld(loss_function) == 'cross_entropy', if_body, else_body, get_state, set_state, ('loss',), 1)
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file7bqcfcm2.py", line 30, in if_body
+    loss = ag__.converted_call(ag__.converted_call(ag__.ld(tf).keras.losses.CategoricalCrossentropy, (), None, fscope), (ag__.ld(y), ag__.ld(y_pred)), None, fscope)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses.py", line 143, in __call__
+    losses = call_fn(y_true, y_pred)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses.py", line 270, in call
+    return ag_fn(y_true, y_pred, **self._fn_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses.py", line 2221, in categorical_crossentropy
+    return backend.categorical_crossentropy(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py", line 5573, in categorical_crossentropy
+    target.shape.assert_is_compatible_with(output.shape)
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 114, in step  *
+        loss = tf.keras.losses.CategoricalCrossentropy()(y, y_pred)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses.py", line 143, in __call__  **
+        losses = call_fn(y_true, y_pred)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses.py", line 270, in call  **
+        return ag_fn(y_true, y_pred, **self._fn_kwargs)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\losses.py", line 2221, in categorical_crossentropy
+        return backend.categorical_crossentropy(
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py", line 5573, in categorical_crossentropy
+        target.shape.assert_is_compatible_with(output.shape)
+    ValueError: Shapes (16, 1999) and (16, 16, 1999) are incompatible

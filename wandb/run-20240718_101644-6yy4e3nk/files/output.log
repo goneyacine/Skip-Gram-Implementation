@@ -1,0 +1,53 @@
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:69: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+epoch : 1
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 118, in train
+    self.save()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 126, in save
+    self.model.save(os.path.join(output_path,'skip_gram.keras'))
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\training.py", line 3103, in save
+    saving_api.save_model(
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\saving_api.py", line 164, in save_model
+    saving_lib.save_model(model, filepath)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\saving_lib.py", line 159, in save_model
+    serialized_model_dict = serialize_keras_object(model)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\serialization_lib.py", line 240, in serialize_keras_object
+    inner_config = _get_class_or_fn_config(obj)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\serialization_lib.py", line 385, in _get_class_or_fn_config
+    config = obj.get_config()
+             ^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\functional.py", line 787, in get_config
+    config = copy.deepcopy(get_network_config(self, config=config))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\functional.py", line 1593, in get_network_config
+    layer_config = serialize_layer_fn(layer)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\serialization_lib.py", line 240, in serialize_keras_object
+    inner_config = _get_class_or_fn_config(obj)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\serialization_lib.py", line 385, in _get_class_or_fn_config
+    config = obj.get_config()
+             ^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\layers\core\dense.py", line 278, in get_config
+    "activation": activations.serialize(self.activation),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\dispatch.py", line 1260, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\activations.py", line 549, in serialize
+    fn_config = serialization_lib.serialize_keras_object(activation)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\saving\serialization_lib.py", line 128, in serialize_keras_object
+    @keras_export(
+KeyboardInterrupt

@@ -1,0 +1,21 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=64)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 141, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filess9uhiiw.py", line 16, in tf__step
+    gradients = [ag__.if_exp(ag__.converted_call(ag__.ld(tf).reduce_max, (ag__.ld(grad),), None, fscope) > 1, lambda: ag__.ld(grad) / ag__.converted_call(ag__.ld(tf).reduce_max, (ag__.ld(grad),), None, fscope), lambda: ag__.ld(grad), 'ag__.converted_call(tf.reduce_max, (grad,), None, fscope) > 1') for grad in ag__.ld(gradients)]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filess9uhiiw.py", line 16, in <listcomp>
+    gradients = [ag__.if_exp(ag__.converted_call(ag__.ld(tf).reduce_max, (ag__.ld(grad),), None, fscope) > 1, lambda: ag__.ld(grad) / ag__.converted_call(ag__.ld(tf).reduce_max, (ag__.ld(grad),), None, fscope), lambda: ag__.ld(grad), 'ag__.converted_call(tf.reduce_max, (grad,), None, fscope) > 1') for grad in ag__.ld(gradients)]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 130, in step  *
+        gradients = [grad / tf.reduce_max(grad) if tf.reduce_max(grad) > 1 else grad for grad in gradients]
+    TypeError: Cannot reconcile tf.cond 0-th outputs:
+      branches returned: (<tf.Tensor 'cond/Identity:0' shape=(None, 300) dtype=float32>, <tensorflow.python.framework.indexed_slices.IndexedSlices object at 0x000001A3A6632210>)

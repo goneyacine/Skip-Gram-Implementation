@@ -1,0 +1,12 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=64)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 135, in train
+    for j in range(int(len(self.train_data) / batch_size)):
+                                       ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 80, in next_batch
+    context_words[i] = context
+    ~~~~~~~~~~~~~^^^
+KeyboardInterrupt

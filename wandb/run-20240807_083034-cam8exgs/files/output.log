@@ -1,0 +1,18 @@
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:80: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=128)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 145, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filen33w4ikm.py", line 14, in tf__step
+    y_pred = ag__.converted_call(ag__.ld(tf).add, (ag__.converted_call(ag__.ld(tf).matmul, (ag__.ld(embed), ag__.ld(tf).self.embed_weights_matrix), None, fscope), ag__.ld(self).embed_biases_matrix), None, fscope)
+                                                                                                            ^^^^^^^^^^^^^^^^
+AttributeError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 127, in step  *
+        y_pred = tf.add(tf.matmul(embed, tf.self.embed_weights_matrix), self.embed_biases_matrix)
+    AttributeError: module 'tensorflow' has no attribute 'self'
+epoch : 1

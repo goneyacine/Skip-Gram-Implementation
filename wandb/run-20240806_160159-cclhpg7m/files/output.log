@@ -1,0 +1,45 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=64)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 136, in train
+    center_words,context_words = self.next_batch(data_index,self.train_data,batch_size)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 82, in next_batch
+    return tf.convert_to_tensor(center_words), tf.convert_to_tensor(np.sum(context_words,axis=2))
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\dispatch.py", line 1260, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\tensor_conversion.py", line 161, in convert_to_tensor_v2_with_dispatch
+    return convert_to_tensor_v2(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\tensor_conversion.py", line 171, in convert_to_tensor_v2
+    return tensor_conversion_registry.convert(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\tensor_conversion_registry.py", line 234, in convert
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\constant_tensor_conversion.py", line 29, in _constant_tensor_conversion_function
+    return constant_op.constant(v, dtype=dtype, name=name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\ops\weak_tensor_ops.py", line 142, in wrapper
+    return op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\constant_op.py", line 276, in constant
+    return _constant_impl(value, dtype, shape, name, verify_shape=False,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\constant_op.py", line 289, in _constant_impl
+    return _constant_eager_impl(ctx, value, dtype, shape, verify_shape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\constant_op.py", line 301, in _constant_eager_impl
+    t = convert_to_eager_tensor(value, ctx, dtype)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\framework\constant_op.py", line 108, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

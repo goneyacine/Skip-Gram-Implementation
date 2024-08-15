@@ -1,0 +1,139 @@
+2024-08-01 10:41:45,613 INFO    StreamThr :15920 [internal.py:wandb_internal():85] W&B internal server running at pid: 15920, started at: 2024-08-01 10:41:45.613719
+2024-08-01 10:41:45,618 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status
+2024-08-01 10:41:45,635 INFO    WriterThread:15920 [datastore.py:open_for_write():87] open: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\run-130tnir3.wandb
+2024-08-01 10:41:45,637 DEBUG   SenderThread:15920 [sender.py:send():379] send: header
+2024-08-01 10:41:45,748 DEBUG   SenderThread:15920 [sender.py:send():379] send: run
+2024-08-01 10:41:46,384 INFO    SenderThread:15920 [dir_watcher.py:__init__():211] watching files in: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files
+2024-08-01 10:41:46,384 INFO    SenderThread:15920 [sender.py:_start_run_threads():1188] run started: 130tnir3 with start time 1722505305.618478
+2024-08-01 10:41:46,384 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: check_version
+2024-08-01 10:41:46,384 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: check_version
+2024-08-01 10:41:46,622 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: run_start
+2024-08-01 10:41:46,653 DEBUG   HandlerThread:15920 [system_info.py:__init__():26] System info init
+2024-08-01 10:41:46,653 DEBUG   HandlerThread:15920 [system_info.py:__init__():41] System info init done
+2024-08-01 10:41:46,653 INFO    HandlerThread:15920 [system_monitor.py:start():194] Starting system monitor
+2024-08-01 10:41:46,653 INFO    SystemMonitor:15920 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-01 10:41:46,653 INFO    HandlerThread:15920 [system_monitor.py:probe():214] Collecting system info
+2024-08-01 10:41:46,669 INFO    SystemMonitor:15920 [interfaces.py:start():188] Started cpu monitoring
+2024-08-01 10:41:46,669 DEBUG   HandlerThread:15920 [system_info.py:probe():152] Probing system
+2024-08-01 10:41:46,684 INFO    SystemMonitor:15920 [interfaces.py:start():188] Started disk monitoring
+2024-08-01 10:41:46,700 INFO    SystemMonitor:15920 [interfaces.py:start():188] Started memory monitoring
+2024-08-01 10:41:46,716 INFO    SystemMonitor:15920 [interfaces.py:start():188] Started network monitoring
+2024-08-01 10:41:46,731 DEBUG   HandlerThread:15920 [system_info.py:_probe_git():137] Probing git
+2024-08-01 10:41:46,950 DEBUG   HandlerThread:15920 [system_info.py:_probe_git():145] Probing git done
+2024-08-01 10:41:46,950 DEBUG   HandlerThread:15920 [system_info.py:probe():200] Probing system done
+2024-08-01 10:41:46,950 DEBUG   HandlerThread:15920 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19044-SP0', 'python': '3.11.4', 'heartbeatAt': '2024-08-01T09:41:46.684835', 'startedAt': '2024-08-01T09:41:45.584730', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'd:\\Dev\\AI Projects\\Skip-Gram-Implementation\\main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/goneyacine/Skip-Gram-Implementation.git', 'commit': '221b2aca08e221268723e47b50cde9ba5cdd1ece'}, 'email': 'goneyacine@gmail.com', 'root': 'D:/Dev/AI Projects/Skip-Gram-Implementation', 'host': 'LAPTOP-33QS219R', 'username': 'TMAX27', 'executable': 'D:\\Dev\\AI Projects\\Skip-Gram-Implementation\\.venv\\Scripts\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1400.0, 'min': 0.0, 'max': 2100.0}, 'cpu_freq_per_core': [{'current': 1400.0, 'min': 0.0, 'max': 2100.0}], 'disk': {'/': {'total': 142.85937118530273, 'used': 87.35489654541016}}, 'memory': {'total': 6.937145233154297}}
+2024-08-01 10:41:46,950 INFO    HandlerThread:15920 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-01 10:41:46,950 INFO    HandlerThread:15920 [system_monitor.py:probe():227] Publishing system info
+2024-08-01 10:41:46,950 INFO    HandlerThread:15920 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-01 10:41:46,981 DEBUG   SenderThread:15920 [sender.py:send():379] send: files
+2024-08-01 10:41:46,981 INFO    SenderThread:15920 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-08-01 10:41:47,265 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-01 10:41:47,265 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: python_packages
+2024-08-01 10:41:47,265 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-01 10:41:47,265 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: stop_status
+2024-08-01 10:41:47,265 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:47,393 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\requirements.txt
+2024-08-01 10:41:47,393 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\wandb-metadata.json
+2024-08-01 10:41:48,281 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:48,500 INFO    wandb-upload_0:15920 [upload_job.py:push():130] Uploaded file C:\Users\TMAX27\AppData\Local\Temp\tmpvwgfa6kjwandb\9j811gab-wandb-metadata.json
+2024-08-01 10:41:48,578 DEBUG   SenderThread:15920 [sender.py:send():379] send: telemetry
+2024-08-01 10:41:49,287 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:49,443 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\output.log
+2024-08-01 10:41:50,297 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:50,974 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:41:51,298 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:51,479 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\output.log
+2024-08-01 10:41:52,303 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:53,436 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:54,383 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:55,368 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:56,381 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:41:56,398 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:57,347 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-01 10:41:57,347 DEBUG   SenderThread:15920 [sender.py:send():379] send: history
+2024-08-01 10:41:57,347 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: summary_record
+2024-08-01 10:41:57,347 INFO    SenderThread:15920 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-01 10:41:57,396 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:57,636 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\wandb-summary.json
+2024-08-01 10:41:58,397 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:41:58,646 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\output.log
+2024-08-01 10:41:59,434 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:00,439 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:01,666 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:01,697 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:42:02,307 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-01 10:42:02,307 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: stop_status
+2024-08-01 10:42:02,478 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:02,814 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-01 10:42:02,814 DEBUG   SenderThread:15920 [sender.py:send():379] send: history
+2024-08-01 10:42:02,814 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: summary_record
+2024-08-01 10:42:02,814 INFO    SenderThread:15920 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-01 10:42:03,471 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:04,019 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\wandb-summary.json
+2024-08-01 10:42:04,487 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:05,028 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\output.log
+2024-08-01 10:42:05,338 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-01 10:42:05,338 DEBUG   SenderThread:15920 [sender.py:send():379] send: history
+2024-08-01 10:42:05,338 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: summary_record
+2024-08-01 10:42:05,338 INFO    SenderThread:15920 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-01 10:42:05,491 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:06,243 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\wandb-summary.json
+2024-08-01 10:42:06,643 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:07,251 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\output.log
+2024-08-01 10:42:07,377 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:42:07,591 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:08,608 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:09,620 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:10,624 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:11,638 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:12,358 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-01 10:42:12,358 DEBUG   SenderThread:15920 [sender.py:send():379] send: history
+2024-08-01 10:42:12,358 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: summary_record
+2024-08-01 10:42:12,358 INFO    SenderThread:15920 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-01 10:42:12,374 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\wandb-summary.json
+2024-08-01 10:42:12,390 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:42:12,695 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:13,661 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:14,933 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:15,534 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\output.log
+2024-08-01 10:42:15,730 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:16,774 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:17,333 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-01 10:42:17,349 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: stop_status
+2024-08-01 10:42:17,589 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:42:17,777 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:18,533 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-01 10:42:18,533 DEBUG   SenderThread:15920 [sender.py:send():379] send: history
+2024-08-01 10:42:18,533 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: summary_record
+2024-08-01 10:42:18,533 INFO    SenderThread:15920 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-01 10:42:18,580 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\wandb-summary.json
+2024-08-01 10:42:18,580 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\config.yaml
+2024-08-01 10:42:18,808 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:19,581 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\output.log
+2024-08-01 10:42:19,831 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:20,815 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:21,852 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:22,847 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:23,589 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:42:23,886 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:24,927 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:25,932 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:26,943 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:27,955 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:28,959 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:29,540 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:42:29,976 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:30,680 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: partial_history
+2024-08-01 10:42:30,680 DEBUG   SenderThread:15920 [sender.py:send():379] send: history
+2024-08-01 10:42:30,696 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: summary_record
+2024-08-01 10:42:30,711 INFO    SenderThread:15920 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-08-01 10:42:30,727 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\wandb-summary.json
+2024-08-01 10:42:30,984 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:31,731 INFO    Thread-16 :15920 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_104145-130tnir3\files\output.log
+2024-08-01 10:42:31,998 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:32,321 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-01 10:42:32,321 DEBUG   SenderThread:15920 [sender.py:send_request():406] send_request: stop_status
+2024-08-01 10:42:33,005 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:34,046 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:42:34,557 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:42:35,044 DEBUG   HandlerThread:15920 [handler.py:handle_request():158] handle_request: internal_messages

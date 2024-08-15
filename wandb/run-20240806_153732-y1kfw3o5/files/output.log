@@ -1,0 +1,10 @@
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:80: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=64)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 140, in train
+    average_loss +=  step_loss / int(len(self.data) / batch_size)
+                                         ^^^^^^^^^
+AttributeError: 'model' object has no attribute 'data'
+epoch : 1

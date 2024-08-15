@@ -1,0 +1,52 @@
+2024-08-01 10:38:30,810 INFO    StreamThr :9332 [internal.py:wandb_internal():85] W&B internal server running at pid: 9332, started at: 2024-08-01 10:38:30.809239
+2024-08-01 10:38:30,815 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: status
+2024-08-01 10:38:30,927 INFO    WriterThread:9332 [datastore.py:open_for_write():87] open: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_103830-jbrjq3hz\run-jbrjq3hz.wandb
+2024-08-01 10:38:30,929 DEBUG   SenderThread:9332 [sender.py:send():379] send: header
+2024-08-01 10:38:31,088 DEBUG   SenderThread:9332 [sender.py:send():379] send: run
+2024-08-01 10:38:31,678 INFO    SenderThread:9332 [dir_watcher.py:__init__():211] watching files in: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_103830-jbrjq3hz\files
+2024-08-01 10:38:31,679 INFO    SenderThread:9332 [sender.py:_start_run_threads():1188] run started: jbrjq3hz with start time 1722505110.868229
+2024-08-01 10:38:31,710 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: check_version
+2024-08-01 10:38:31,711 DEBUG   SenderThread:9332 [sender.py:send_request():406] send_request: check_version
+2024-08-01 10:38:32,034 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: run_start
+2024-08-01 10:38:32,063 DEBUG   HandlerThread:9332 [system_info.py:__init__():26] System info init
+2024-08-01 10:38:32,063 DEBUG   HandlerThread:9332 [system_info.py:__init__():41] System info init done
+2024-08-01 10:38:32,063 INFO    HandlerThread:9332 [system_monitor.py:start():194] Starting system monitor
+2024-08-01 10:38:32,064 INFO    SystemMonitor:9332 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-01 10:38:32,064 INFO    HandlerThread:9332 [system_monitor.py:probe():214] Collecting system info
+2024-08-01 10:38:32,072 INFO    SystemMonitor:9332 [interfaces.py:start():188] Started cpu monitoring
+2024-08-01 10:38:32,079 DEBUG   HandlerThread:9332 [system_info.py:probe():152] Probing system
+2024-08-01 10:38:32,080 INFO    SystemMonitor:9332 [interfaces.py:start():188] Started disk monitoring
+2024-08-01 10:38:32,095 INFO    SystemMonitor:9332 [interfaces.py:start():188] Started memory monitoring
+2024-08-01 10:38:32,116 INFO    SystemMonitor:9332 [interfaces.py:start():188] Started network monitoring
+2024-08-01 10:38:32,118 DEBUG   HandlerThread:9332 [system_info.py:_probe_git():137] Probing git
+2024-08-01 10:38:32,402 DEBUG   HandlerThread:9332 [system_info.py:_probe_git():145] Probing git done
+2024-08-01 10:38:32,402 DEBUG   HandlerThread:9332 [system_info.py:probe():200] Probing system done
+2024-08-01 10:38:32,402 DEBUG   HandlerThread:9332 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19044-SP0', 'python': '3.11.4', 'heartbeatAt': '2024-08-01T09:38:32.080692', 'startedAt': '2024-08-01T09:38:30.716230', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'd:\\Dev\\AI Projects\\Skip-Gram-Implementation\\main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/goneyacine/Skip-Gram-Implementation.git', 'commit': '221b2aca08e221268723e47b50cde9ba5cdd1ece'}, 'email': 'goneyacine@gmail.com', 'root': 'D:/Dev/AI Projects/Skip-Gram-Implementation', 'host': 'LAPTOP-33QS219R', 'username': 'TMAX27', 'executable': 'D:\\Dev\\AI Projects\\Skip-Gram-Implementation\\.venv\\Scripts\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2100.0, 'min': 0.0, 'max': 2100.0}, 'cpu_freq_per_core': [{'current': 2100.0, 'min': 0.0, 'max': 2100.0}], 'disk': {'/': {'total': 142.85937118530273, 'used': 87.36375427246094}}, 'memory': {'total': 6.937145233154297}}
+2024-08-01 10:38:32,402 INFO    HandlerThread:9332 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-01 10:38:32,402 INFO    HandlerThread:9332 [system_monitor.py:probe():227] Publishing system info
+2024-08-01 10:38:32,404 INFO    HandlerThread:9332 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-01 10:38:32,688 INFO    Thread-16 :9332 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_103830-jbrjq3hz\files\wandb-metadata.json
+2024-08-01 10:38:32,727 DEBUG   SenderThread:9332 [sender.py:send():379] send: files
+2024-08-01 10:38:32,727 INFO    SenderThread:9332 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-08-01 10:38:33,535 INFO    wandb-upload_0:9332 [upload_job.py:push():130] Uploaded file C:\Users\TMAX27\AppData\Local\Temp\tmpl63lvbjbwandb\cg3o1b0c-wandb-metadata.json
+2024-08-01 10:38:33,719 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-01 10:38:33,720 DEBUG   SenderThread:9332 [sender.py:send_request():406] send_request: python_packages
+2024-08-01 10:38:33,726 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-01 10:38:33,728 DEBUG   SenderThread:9332 [sender.py:send_request():406] send_request: stop_status
+2024-08-01 10:38:33,751 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:38:34,231 DEBUG   SenderThread:9332 [sender.py:send():379] send: telemetry
+2024-08-01 10:38:34,705 INFO    Thread-16 :9332 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_103830-jbrjq3hz\files\output.log
+2024-08-01 10:38:34,705 INFO    Thread-16 :9332 [dir_watcher.py:_on_file_created():271] file/dir created: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_103830-jbrjq3hz\files\requirements.txt
+2024-08-01 10:38:34,768 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:38:35,783 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:38:35,892 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:38:36,732 INFO    Thread-16 :9332 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_103830-jbrjq3hz\files\output.log
+2024-08-01 10:38:37,740 INFO    Thread-16 :9332 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\Dev\AI Projects\Skip-Gram-Implementation\wandb\run-20240801_103830-jbrjq3hz\files\output.log
+2024-08-01 10:38:40,357 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-01 10:38:41,368 DEBUG   HandlerThread:9332 [handler.py:handle_request():158] handle_request: status_report
+2024-08-01 10:38:42,138 INFO    cpu       :9332 [interfaces.py:monitor():138] Process cpu has exited.
+2024-08-01 10:38:42,139 DEBUG   SystemMonitor:9332 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-01 10:38:42,139 DEBUG   SystemMonitor:9332 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-01 10:38:42,140 DEBUG   SystemMonitor:9332 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-01 10:38:42,142 DEBUG   SenderThread:9332 [sender.py:send():379] send: stats
+2024-08-01 10:38:43,130 INFO    MainThread:9332 [internal.py:handle_exit():75] Internal process exited

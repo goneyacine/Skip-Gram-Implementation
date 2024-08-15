@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 117, in train
+    step_accuracy,step_loss = step(center_words,context_words)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_file6axcuuz_.py", line 12, in tf__step
+    y_pred = ag__.converted_call(ag__.ld(self).model, (ag__.ld(x),), None, fscope)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 72, in error_handler
+    del filtered_tb
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+    raise ValueError(
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 99, in step  *
+        y_pred = self.model(x)
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler  **
+        raise e.with_traceback(filtered_tb) from None
+    File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\engine\input_spec.py", line 298, in assert_input_compatibility
+        raise ValueError(
+    ValueError: Input 0 of layer "model" is incompatible with the layer: expected shape=(None, 4999), found shape=(128, 2445)
+epoch : 1

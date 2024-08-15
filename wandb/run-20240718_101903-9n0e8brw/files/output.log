@@ -1,0 +1,16 @@
+
+epoch : 1
+d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:69: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 118, in train
+    self.save()
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 126, in save
+    self.model.save(os.path.join(output_path,'skip_gram.keras'))
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Python311\Lib\zipfile.py", line 1289, in __init__
+    raise
+OSError: [Errno 22] Invalid argument: 'model\\skip_gram.keras'

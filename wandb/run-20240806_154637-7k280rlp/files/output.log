@@ -1,0 +1,11 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=64)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 145, in train
+    self.save(config=config)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 152, in save
+    os.mkdir(path)
+OSError: [WinError 123] The filename, directory name, or volume label syntax is incorrect: 'Experiments\\2024-08-06 15:46:41'
+valid loss :2.4330409

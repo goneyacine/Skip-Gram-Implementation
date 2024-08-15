@@ -1,0 +1,18 @@
+
+epoch : 1
+Traceback (most recent call last):
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 4, in <module>
+    _model.train(epochs=1,batch_size=32)
+  File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 129, in train
+    step_loss = step(center_words,context_words)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\TMAX27\AppData\Local\Temp\__autograph_generated_filewlb25oca.py", line 13, in tf__step
+    word_embed = ag__.ld(self).embed_matrix[:, ag__.ld(x), :]
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ValueError: in user code:
+    File "d:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 109, in step  *
+        word_embed = self.embed_matrix[:,x,:]
+    ValueError: Shapes must be equal rank, but are 2 and 0
+    	From merging shape 1 with other shapes. for '{{node strided_slice/stack_2}} = Pack[N=3, T=DT_INT32, axis=0](strided_slice/stack_2/values_0, x, strided_slice/stack_2/values_2)' with input shapes: [], [32,1], [].

@@ -1,0 +1,14 @@
+epoch : 1
+<class 'numpy.ndarray'>
+Tensor("x:0", shape=(16,), dtype=int32)
+y_true ......................  Tensor("Shape:0", shape=(2,), dtype=int32)
+y_pred ......................  Tensor("Shape_1:0", shape=(2,), dtype=int32)
+Tensor("x:0", shape=(16,), dtype=int32)
+y_true ......................  Tensor("Shape:0", shape=(2,), dtype=int32)
+y_pred ......................  Tensor("Shape_1:0", shape=(2,), dtype=int32)
+WARNING:tensorflow:From D:\Dev\AI Projects\Skip-Gram-Implementation\.venv\Lib\site-packages\keras\src\backend.py:806: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>

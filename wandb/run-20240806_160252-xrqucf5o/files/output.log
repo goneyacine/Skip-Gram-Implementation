@@ -1,0 +1,18 @@
+
+epoch : 1
+D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py:80: RuntimeWarning: invalid value encountered in cast
+  context_words[i] = context
+valid loss :-157648300.0
+Traceback (most recent call last):
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\main.py", line 7, in <module>
+    _model.train(epochs=1,batch_size=128)
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 142, in train
+    valid_loss = self.valid(batch_size)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 89, in valid
+    center_words,context_words = self.next_batch(data_index,self.valid_data,batch_size)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Dev\AI Projects\Skip-Gram-Implementation\skip_gram.py", line 76, in next_batch
+    context = np.ndarray(shape=( self.vocabulary_size,skip_window * 2))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
